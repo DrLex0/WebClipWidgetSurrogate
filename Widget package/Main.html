@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<!--
+  Surrogate Web Clip Widget
+  2020 Alexander Thomas
+  License: public domain (https://creativecommons.org/publicdomain/zero/1.0/)
+
+  Update the title and width & height pairs in the iframe and div elements below to match your needs.
+  Also update width and height in Info.plist, together with CFBundleIdentifier and names.
+
+  You could change the 'scrolling' attribute of the iframe to "yes" or "auto", but scrolling is
+  only possible when the mouse is over the scroll bar.
+-->
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Main Widget Page</title>
+
+	<script type='text/javascript' src='file:///System/Library/WidgetResources/AppleClasses/AppleAnimator.js' charset='utf-8'></script>
+	<script type='text/javascript' src='file:///System/Library/WidgetResources/AppleClasses/AppleButton.js' charset='utf-8'></script>
+	<script type='text/javascript' src='file:///System/Library/WidgetResources/AppleClasses/AppleInfoButton.js' charset='utf-8'></script>
+	<script type='text/javascript' src='scripts.js' charset='utf-8'></script>
+</head>
+
+<body style="margin:0; padding:0" onload="onShow()">
+
+	<iframe id="theFrame" src="Splash.html" scrolling="no" width=328 height=360 style="z-index:1; overflow:hidden; background:#fff; position:fixed; left:3px; top:3px; margin:0; border:0; border-radius:6px; box-shadow: 2px 2px 8px #0009" onload="hideWait()"></iframe>
+
+	<div id="wait" style="width:328px; height:360px; z-index:10; visibility:visible; position:fixed; left:3px; top:3px; background:#0000; text-align:center"><span style="display:inline-block; height:100%; vertical-align:middle"></span><img src="wait.gif" width=66 height=66 style="vertical-align:middle"></div>
+
+</body>
+
+</html>
